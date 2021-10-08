@@ -32,12 +32,12 @@ jobs:
         run: Rscript -e 'remotes::install_github("mps9506/ftree")'
 
       - name: Render README
-        run: Rscript -e 'rmarkdown::render("README.Rmd")'
+        run: Rscript -e 'rmarkdown::render("README.Rmd", output_format = rmarkdown::github_document(html_preview = FALSE))'
 
       - name: Commit README
         run: |
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git add -A
+          git add README.md man/figures/*
           git commit -m "Re-build README.md" --no-verify|| echo "No changes to commit"
-          git push origin master || echo "No changes to commit"
+          git push -u origin master || echo "No changes to commit"
