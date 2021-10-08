@@ -40,4 +40,4 @@ Test rendering:
 emo::ji("folder")
 ```
 
-ping2
+ping3
