@@ -45,4 +45,4 @@ Test emjoi rendering:
 emo::ji("folder")
 ```
 
-ping1
+ping3

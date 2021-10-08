@@ -101,11 +101,15 @@ ftree_unix <- function(path = path,
 
     ## folders
     folder <- paste0("---", emo::ji("folder"))
-    #x <- gsub("---", "---\U0001f4c2", x)
-    x <- gsub("---", folder, x)
+    ## select white space before words that end in /
+    x <- gsub("\\s(?=((\\w.*)(?=(\\/(?=\\s)))))", folder, x, perl = TRUE)
 
     ## files
-    x <- gsub("(\\s\\s\\s\\b)+", "  \U0001f4dc", x, perl = TRUE)
+    fe <- emo::ji("file")
+
+    ## why won't this parse?
+    x <- gsub("\\s(?!(\\w.*(?=\\/))|\\/|(?<=\\/)\\w.*)\\b", fe, x, perl = TRUE)
+    x
 
   }
 
