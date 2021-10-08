@@ -29,7 +29,7 @@ jobs:
             remotes
 
       - name: Install ftree
-        run: Rscript -e `remotes::install_github("mps9506/ftree")`
+        run: Rscript -e 'remotes::install_github("mps9506/ftree")'
 
       - name: Render Rmarkdown files
         run: |
