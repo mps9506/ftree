@@ -12,20 +12,22 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 ftree is an experimental and mostly useless R package. It has one
 function, `ftree()` that shows a file tree on your console.
 
-Note that this doesn’t seem to work well when with rmarkdown in Windows.
+## Unix
+
+This should work fine, still working on unicode rendering.
 
 ``` r
 ## this doesn't render in Github Markdown
 library(ftree)
 ftree(path = system.file(package = "ftree"))
 #> [1] "/home/runner/work/_temp/Library/ftree"
-#> [2] "/f"                                   
-#> [3] "/a"                                   
+#> [2] "-a"                                   
+#> [3] "-F"                                   
 #> /home/runner/work/_temp/Library/ftree
 #> ├── DESCRIPTION
 #> ├── INDEX
 #> ├── LICENSE
-#> ├── Meta
+#> ├── Meta/
 #> │   ├── Rd.rds
 #> │   ├── features.rds
 #> │   ├── hsearch.rds
@@ -33,34 +35,37 @@ ftree(path = system.file(package = "ftree"))
 #> │   ├── nsInfo.rds
 #> │   └── package.rds
 #> ├── NAMESPACE
-#> ├── R
+#> ├── R/
 #> │   ├── ftree
 #> │   ├── ftree.rdb
 #> │   └── ftree.rdx
-#> ├── help
+#> ├── help/
 #> │   ├── AnIndex
 #> │   ├── aliases.rds
-#> │   ├── figures
+#> │   ├── figures/
 #> │   │   └── console-screenshot-1.png
 #> │   ├── ftree.rdb
 #> │   ├── ftree.rdx
 #> │   └── paths.rds
-#> └── html
+#> └── html/
 #>     ├── 00Index.html
 #>     └── R.css
-#> /f [error opening dir]
-#> /a [error opening dir]
 #> 
 #> 5 directories, 21 files
 ```
 
+## Windows
+
+Note that unicode rendering this doesn’t seem to work well when with
+rmarkdown in Windows. However, it should display fine in the console.
+
 <img src="man/figures/console-screenshot-1.png" width="50%" />
 
-Test rendering:
+Test emjoi rendering:
 
 ``` r
 emo::ji("folder")
-#> 📂
+#> 📁
 ```
 
 ping1
