@@ -60,7 +60,6 @@ ftree_win <- function(path = path,
 
     ## folders
     folder <- paste0("---", emo::ji("folder"))
-    #x <- gsub("---", "---\U0001f4c2", x)
     x <- gsub("---", folder, x)
 
     ## files
@@ -100,9 +99,9 @@ ftree_unix <- function(path = path,
     # some regex to sub unicode emojis
 
     ## folders
-    folder <- paste0("---", emo::ji("folder"))
+    folder <- emo::ji("folder")
     ## select white space before words that end in /
-    x <- gsub("\\s(?=((\\w.*)(?=(\\/(?=\\s)))))", folder, x, perl = TRUE)
+    #x <- gsub("\\s(?=((\\w.*)(?=(\\/(?=\\s)))))", folder, x, perl = TRUE)
 
     ## files
     fe <- emo::ji("file")

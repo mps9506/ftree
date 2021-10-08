@@ -23,7 +23,7 @@ ftree is an experimental and mostly useless R package. It has one function, `ftr
 
 ## Unix
 
-This should work fine, still working on unicode rendering.
+Unicode doesn't quite work correctly..
 
 ```{r example}
 ## this doesn't render in Github Markdown
@@ -45,4 +45,4 @@ Test emjoi rendering:
 emo::ji("folder")
 ```
 
-ping3
+ping4
