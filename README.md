@@ -10,10 +10,9 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 ftree is an experimental and mostly useless R package. It has one
-function, `ftree()` that shows a file tree on your console. It works on
-Windows. I don’t fully understand character encoding and have not tried
-it on Linux or Mac. It is also questionable if it works well with
-Rmarkdown.
+function, `ftree()` that shows a file tree on your console.
+
+Note that this doesn’t seem to work well when with rmarkdown in Windows.
 
 ``` r
 ## this doesn't render in Github Markdown
@@ -32,20 +31,28 @@ ftree()
 #> |  <U+0001F4DC>README.md
 #> |  <U+0001F4DC>README.Rmd
 #> |   
-#> +---<U+0001F4C2>man
+#> +---<U+0001F4C1>.github
+#> |   |   .gitignore
+#> |   |   
+#> |   \---<U+0001F4C1>workflows
+#> |          <U+0001F4DC>render-rmarkdown.yaml
+#> |           
+#> +---<U+0001F4C1>man
 #> |   |  <U+0001F4DC>ftree.Rd
 #> |   |   
-#> |   \---<U+0001F4C2>figures
+#> |   \---<U+0001F4C1>figures
 #> |          <U+0001F4DC>console-screenshot-1.png
 #> |           
-#> \---<U+0001F4C2>R
+#> \---<U+0001F4C1>R
 #>        <U+0001F4DC>ftree.R
 #> 
 ```
 
 <img src="man/figures/console-screenshot-1.png" width="50%" />
 
+Test rendering:
+
 ``` r
 emo::ji("folder")
-#> <U+0001F4C2>
+#> <U+0001F4C1>
 ```
