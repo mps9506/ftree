@@ -24,34 +24,34 @@ ftree(path = system.file(package = "ftree"))
 #> [2] "-a"                                   
 #> [3] "-F"                                   
 #> /home/runner/work/_temp/Library/ftree
-#> ├── DESCRIPTION
-#> ├── INDEX
-#> ├── LICENSE
+#> ├──📂DESCRIPTION
+#> ├──📂INDEX
+#> ├──📂LICENSE
 #> ├── Meta/
-#> │   ├── Rd.rds
-#> │   ├── features.rds
-#> │   ├── hsearch.rds
-#> │   ├── links.rds
-#> │   ├── nsInfo.rds
-#> │   └── package.rds
-#> ├── NAMESPACE
+#> │   ├──📂Rd.rds
+#> │   ├──📂features.rds
+#> │   ├──📂hsearch.rds
+#> │   ├──📂links.rds
+#> │   ├──📂nsInfo.rds
+#> │   └──📂package.rds
+#> ├──📂NAMESPACE
 #> ├── R/
-#> │   ├── ftree
-#> │   ├── ftree.rdb
-#> │   └── ftree.rdx
+#> │   ├──📂ftree
+#> │   ├──📂ftree.rdb
+#> │   └──📂ftree.rdx
 #> ├── help/
-#> │   ├── AnIndex
-#> │   ├── aliases.rds
+#> │   ├──📂AnIndex
+#> │   ├──📂aliases.rds
 #> │   ├── figures/
-#> │   │   └── console-screenshot-1.png
-#> │   ├── ftree.rdb
-#> │   ├── ftree.rdx
-#> │   └── paths.rds
+#> │   │   └──📂console-screenshot-1.png
+#> │   ├──📂ftree.rdb
+#> │   ├──📂ftree.rdx
+#> │   └──📂paths.rds
 #> └── html/
-#>     ├── 00Index.html
-#>     └── R.css
+#>     ├──📂00Index.html
+#>     └──📂R.css
 #> 
-#> 5 directories, 21 files
+#> 5📂directories,📂21📂files
 ```
 
 ## Windows
@@ -65,7 +65,7 @@ Test emjoi rendering:
 
 ``` r
 emo::ji("folder")
-#> 📁
+#> 📂
 ```
 
-ping1
+ping3
