@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ftree
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+ftree is an experimental and mostly useless R package. It has one function, `ftree()` that shows a file tree on your console.
+
+Note that this doesn't seem to work well when with rmarkdown in Windows.
+
+```{r example}
+## this doesn't render in Github Markdown
+library(ftree)
+ftree()
+```
+
+
+```{r console, echo=FALSE, out.width="50%"}
+knitr::include_graphics("man/figures/console-screenshot-1.png")
+```
+
+```{r}
+emo::ji("folder")
+```
+

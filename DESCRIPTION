@@ -1,0 +1,19 @@
+Package: ftree
+Type: Package
+Title: Display a Fancy File Tree
+Version: 0.1.0
+Authors@R: 
+    person(given = "Michael",
+           family = "Schramm",
+           role = c("aut", "cre", "cph"),
+           email = "mpschramm@gmail.com",
+           comment = c(ORCID = "0000-0003-1876-6592"))
+Description: This is a toy package that displays a file tree structure in the console.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
+Imports:
+  emo
+Remotes: hadley/emo
