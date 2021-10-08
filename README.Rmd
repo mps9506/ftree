@@ -21,7 +21,9 @@ knitr::opts_chunk$set(
 
 ftree is an experimental and mostly useless R package. It has one function, `ftree()` that shows a file tree on your console.
 
-Note that this doesn't seem to work well when with rmarkdown in Windows.
+## Unix
+
+This should work fine, still working on unicode rendering.
 
 ```{r example}
 ## this doesn't render in Github Markdown
@@ -29,12 +31,15 @@ library(ftree)
 ftree(path = system.file(package = "ftree"))
 ```
 
+## Windows
+
+Note that unicode rendering this doesn't seem to work well when with rmarkdown in Windows. However, it should display fine in the console. 
 
 ```{r console, echo=FALSE, out.width="50%"}
 knitr::include_graphics("man/figures/console-screenshot-1.png")
 ```
 
-Test rendering:
+Test emjoi rendering:
 
 ```{r}
 emo::ji("folder")
