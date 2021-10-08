@@ -21,8 +21,16 @@ jobs:
 
       - uses: r-lib/actions/setup-r@v1
 
-      - uses: r-lib/actions/setup-renv@v1
-      
+      - uses: r-lib/actions/setup-r-dependencies@v1
+        with:
+          cache-version: 2
+          extra-packages: |
+            rmarkdown
+            remotes
+
+      - name: Install ftree
+        run: Rscript -e `remotes::install_github("mps9506/ftree")`
+
       - name: Render Rmarkdown files
         run: |
           RMD_PATH=($(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '[.]Rmd$'))
