@@ -16,9 +16,9 @@ ftree <- function(path = NULL,
 
   ## print files logic
   if(isTRUE(files)) {
-    fargs <- c("/f", "/a")
+    fargs <- c("/f", "/a") ## /f files
   } else {
-    fargs <- c("/a")
+    fargs <- c("/a") ## /a ascii output (most compatible with windows)
   }
 
   ## argument logic and run tree system command
@@ -28,6 +28,7 @@ ftree <- function(path = NULL,
                  stdout = TRUE)
   } else {
     fargs <- append(path, fargs)
+    print(fargs)
     x <- system2(command = "tree",
                  args = fargs,
                  stdout = TRUE)
