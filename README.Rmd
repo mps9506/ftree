@@ -31,6 +31,16 @@ library(ftree)
 ftree(path = system.file(package = "ftree"))
 ```
 
+
+
+or render with no emoji
+```{r example}
+## note this should be equivalent to fs::dir_tree()
+ftree(path = system.file(package = "ftree"), unicode = FALSE)
+```
+
+
+
 ## Windows
 
 Note that unicode rendering this doesn't seem to work well when with rmarkdown in Windows. However, it should display fine in the console. 
@@ -39,10 +49,5 @@ Note that unicode rendering this doesn't seem to work well when with rmarkdown i
 knitr::include_graphics("man/figures/console-screenshot-1.png")
 ```
 
-Test emjoi rendering:
-
-```{r}
-emo::ji("folder")
-```
 
 ping5

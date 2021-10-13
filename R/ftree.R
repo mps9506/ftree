@@ -34,6 +34,9 @@ ftree_win <- function(path = path,
                       files = files,
                       unicode = unicode) {
 
+  folder <- "\U0001f4c2"
+  fe <- "  \U0001f9fe"
+
   ## print files logic
   if(isTRUE(files)) {
     fargs <- c("/f", "/a") ## /f files
@@ -58,11 +61,10 @@ ftree_win <- function(path = path,
     # some regex to sub unicode emojis
 
     ## folders
-    folder <- paste0("---", emo::ji("folder"))
     x <- gsub("---", folder, x)
 
     ## files
-    x <- gsub("(\\s\\s\\s\\b)+", "  \U0001f4dc", x, perl = TRUE)
+    x <- gsub("(\\s\\s\\s\\b)+", fe, x, perl = TRUE)
 
   }
 
@@ -100,13 +102,15 @@ ftree_unix <- function(path = path,
     ## folders
     folder <- "\U0001f4c2"
     ## select white space before words that end in /
-    #x <- gsub("\\s(?=((\\w.*)(?=(\\/(?=\\s)))))", folder, x, perl = TRUE)
+    x <- gsub("[ ](?=\\w.*(\\/\\n))", folder, x, perl = TRUE)
 
     ## files
     fe <- "\U0001f9fe"
 
-    ## why won't this parse?
-    x <- gsub("\\s(?!(\\w.*(?=\\/))|\\/|(?<=\\/)\\w.*)\\b", fe, x, perl = TRUE)
+    x <- gsub("(?<=─)(([ ])(?!(\\w.*(?=\\/))|\\/|(?<=\\/)\\w.*)\\b)",
+              fe,
+              x,
+              perl = TRUE)
     x
 
   }
