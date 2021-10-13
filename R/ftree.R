@@ -5,7 +5,6 @@
 #' @param files Logical. TRUE shows individual files, FALSE will only show folders. Default is TRUE.
 #' @param unicode Show unicode emojis. Not sure how well this works across systems. Defaults to TRUE
 #'
-#' @import emo
 #' @return None
 #' @export
 ftree <- function(path = NULL,
@@ -99,12 +98,12 @@ ftree_unix <- function(path = path,
     # some regex to sub unicode emojis
 
     ## folders
-    folder <- emo::ji("folder")
+    folder <- "\U0001f4c2"
     ## select white space before words that end in /
     #x <- gsub("\\s(?=((\\w.*)(?=(\\/(?=\\s)))))", folder, x, perl = TRUE)
 
     ## files
-    fe <- emo::ji("file")
+    fe <- "\U0001f9fe"
 
     ## why won't this parse?
     x <- gsub("\\s(?!(\\w.*(?=\\/))|\\/|(?<=\\/)\\w.*)\\b", fe, x, perl = TRUE)
