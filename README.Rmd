@@ -34,7 +34,7 @@ ftree(path = system.file(package = "ftree"))
 
 
 or render with no emoji
-```{r example}
+```{r example2}
 ## note this should be equivalent to fs::dir_tree()
 ftree(path = system.file(package = "ftree"), unicode = FALSE)
 ```
