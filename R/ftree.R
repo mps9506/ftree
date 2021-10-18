@@ -102,14 +102,18 @@ ftree_unix <- function(path = path,
     ## folders
     folder <- "\U0001f4c2"
     ## select white space before words that end in /
-    x <- gsub("[ ](?=\\w.*(\\/\\n))", folder, x)
+    x <- gsub(pattern = "\\s(?=\\w.*(\\/\\n))",
+              replacement = folder,
+              x = x,
+              ignore.case = TRUE,
+              perl = TRUE)
 
     ## files
     fe <- "\U0001f9fe"
 
-    x <- gsub("(?<=─)(([ ])(?!(\\w.*(?=\\/))|\\/|(?<=\\/)\\w.*)\\b)",
-              fe,
-              x,
+    x <- gsub(pattern = "(?<=─)(([ ])(?!(\\w.*(?=\\/))|\\/|(?<=\\/)\\w.*)\\b)",
+              replacement = fe,
+              x = x,
               perl = TRUE)
     x
 
