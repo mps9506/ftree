@@ -100,4 +100,4 @@ rmarkdown in Windows. However, it should display fine in the console.
 
 <img src="man/figures/console-screenshot-1.png" width="50%" />
 
-ping5
+2021-10-18 18:27:58 ping1
