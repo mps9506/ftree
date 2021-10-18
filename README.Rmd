@@ -50,4 +50,4 @@ knitr::include_graphics("man/figures/console-screenshot-1.png")
 ```
 
 
-ping5
+`r Sys.time()`
